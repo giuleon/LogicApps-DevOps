@@ -1,0 +1,23 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "workflows_PoC_CI_CD_name": {
+            "value": "PoC-CI-CD"
+        },
+        "LogicAppLocation": {
+            "value": "westeurope"
+        },
+        "connections_outlook_externalid": {
+            "value": "/subscriptions/3d0b8544-e3c0-42f5-bffd-7577fc2dc70e/resourceGroups/PoC/providers/Microsoft.Web/connections/outlook"
+        },
+        "secret": {
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/3d0b8544-e3c0-42f5-bffd-7577fc2dc70e/resourceGroups/PoC/providers/Microsoft.KeyVault/vaults/PoC-Secrets"
+                },
+                "secretName": "key"
+            }
+        }
+    }
+}
